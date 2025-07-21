@@ -1,7 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
+import { useState, useEffect } from "react";
 
 const Header = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
   return (
     <header className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
       <div className="container mx-auto px-4">
@@ -11,7 +18,9 @@ const Header = () => {
               <img 
                 src="/lovable-uploads/8ba7cf05-5630-40ee-9b7f-877ddd8507c7.png" 
                 alt="Syncore Health" 
-                className="h-8 w-auto"
+                className={`h-8 w-auto transition-all duration-1000 ease-out ${
+                  isLoaded ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'
+                }`}
               />
             </div>
             <nav className="hidden md:flex items-center gap-6">
