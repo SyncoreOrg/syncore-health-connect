@@ -72,7 +72,7 @@ const Hero = () => {
           </div>
           <div className="flex-1 max-w-lg">
             <img 
-              src="/lovable-uploads/8ba7cf05-5630-40ee-9b7f-877ddd8507c7.png" 
+              src="/lovable-uploads/syncore-health-logo.svg" 
               alt="Syncore Health Logo" 
               className="w-full h-auto"
             />
