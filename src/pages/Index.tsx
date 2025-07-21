@@ -6,6 +6,7 @@ import Mission from "@/components/Mission";
 import Team from "@/components/Team";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const Index = () => {
   return (
@@ -28,6 +29,7 @@ const Index = () => {
         </section>
       </main>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };
