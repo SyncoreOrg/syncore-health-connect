@@ -23,19 +23,39 @@ const Header = () => {
                 }`}
               />
             </div>
-            <nav className="hidden md:flex items-center gap-6">
-              <a href="#features" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <nav className="hidden md:flex items-center gap-3">
+              <Button 
+                variant="ghost" 
+                size="sm"
+                onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
+                className="text-sm hover:bg-accent"
+              >
                 Features
-              </a>
-              <a href="#cases" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              </Button>
+              <Button 
+                variant="ghost" 
+                size="sm"
+                onClick={() => document.getElementById('cases')?.scrollIntoView({ behavior: 'smooth' })}
+                className="text-sm hover:bg-accent"
+              >
                 Case Studies
-              </a>
-              <a href="#team" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              </Button>
+              <Button 
+                variant="ghost" 
+                size="sm"
+                onClick={() => document.getElementById('team')?.scrollIntoView({ behavior: 'smooth' })}
+                className="text-sm hover:bg-accent"
+              >
                 Team
-              </a>
-              <a href="#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              </Button>
+              <Button 
+                variant="ghost" 
+                size="sm"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                className="text-sm hover:bg-accent"
+              >
                 Contact
-              </a>
+              </Button>
             </nav>
           </div>
           

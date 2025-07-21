@@ -1,14 +1,42 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
+import { useState, useEffect } from "react";
 
 const Hero = () => {
+  const [displayedText, setDisplayedText] = useState("");
+  const fullText = "Electronic Health Records";
+  const [isHovered, setIsHovered] = useState(false);
+
+  useEffect(() => {
+    let index = 0;
+    const timer = setInterval(() => {
+      if (index < fullText.length) {
+        setDisplayedText(fullText.slice(0, index + 1));
+        index++;
+      } else {
+        clearInterval(timer);
+      }
+    }, 100);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-background to-syncore-gradient-subtle">
       <div className="container mx-auto px-4 py-20 lg:py-32">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="flex-1 text-center lg:text-left">
-            <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-foreground">
-              Electronic Health Records
+            <h1 
+              className={`text-4xl lg:text-6xl font-bold mb-6 text-foreground transition-transform duration-300 cursor-default ${
+                isHovered ? 'scale-105' : 'scale-100'
+              }`}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              <span className="inline-block min-h-[1.2em]">
+                {displayedText}
+                <span className="animate-pulse">|</span>
+              </span>
               <span className="block bg-syncore-gradient bg-clip-text text-transparent">
                 Built for Care
               </span>
