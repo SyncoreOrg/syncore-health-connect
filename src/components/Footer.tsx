@@ -35,16 +35,6 @@ const Footer = () => {
               <li><a href="#" className="hover:text-background transition-colors">Contact</a></li>
             </ul>
           </div>
-          
-          <div>
-            <h4 className="font-semibold mb-4">Support</h4>
-            <ul className="space-y-2 text-sm text-background/70">
-              <li><a href="#" className="hover:text-background transition-colors">Documentation</a></li>
-              <li><a href="#" className="hover:text-background transition-colors">Help Center</a></li>
-              <li><a href="#" className="hover:text-background transition-colors">Training</a></li>
-              <li><a href="#" className="hover:text-background transition-colors">Community</a></li>
-            </ul>
-          </div>
         </div>
         
         <Separator className="my-8 bg-background/20" />
