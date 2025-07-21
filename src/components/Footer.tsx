@@ -6,11 +6,6 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <img 
-              src="/lovable-uploads/8ba7cf05-5630-40ee-9b7f-877ddd8507c7.png" 
-              alt="Syncore Health" 
-              className="h-8 w-auto brightness-0 invert"
-            />
             <p className="text-sm text-background/70">
               Building the future of Electronic Health Records with AI-powered, intuitive software designed for healthcare teams.
             </p>
