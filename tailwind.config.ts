@@ -28,6 +28,9 @@ export default {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
 				},
+				'syncore-blue': 'hsl(var(--syncore-blue))',
+				'syncore-purple': 'hsl(var(--syncore-purple))',
+				'syncore-pink': 'hsl(var(--syncore-pink))',
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))'
@@ -62,6 +65,10 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				}
+			},
+			backgroundImage: {
+				'syncore-gradient': 'var(--syncore-gradient)',
+				'syncore-gradient-subtle': 'var(--syncore-gradient-subtle)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
