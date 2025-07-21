@@ -32,7 +32,7 @@ const Footer = () => {
         <Separator className="my-8 bg-background/20" />
         
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-background/70">
-          <p>&copy; 2024 Syncore Health. All rights reserved.</p>
+          <p>&copy; 2025 Syncore Medical Technologies Inc.  All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-background transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-background transition-colors">Terms of Service</a>
