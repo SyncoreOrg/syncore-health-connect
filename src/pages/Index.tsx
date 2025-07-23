@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import CaseStudies from "@/components/CaseStudies";
+import AIAssistant from "@/components/AIAssistant";
 import Mission from "@/components/Mission";
 import Team from "@/components/Team";
 import CTA from "@/components/CTA";
@@ -17,6 +18,10 @@ const Index = () => {
         <section id="features">
           <Features />
         </section>
+        <section id="cases">
+          <CaseStudies />
+        </section>
+        <AIAssistant />
         <Mission />
         <section id="team">
           <Team />
