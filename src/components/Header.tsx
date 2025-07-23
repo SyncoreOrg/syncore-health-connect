@@ -33,22 +33,6 @@ const Header = () => {
               <Button 
                 variant="ghost" 
                 size="sm"
-                onClick={() => document.getElementById('cases')?.scrollIntoView({ behavior: 'smooth' })}
-                className="text-sm hover:bg-accent"
-              >
-                Case Studies
-              </Button>
-              <Button 
-                variant="ghost" 
-                size="sm"
-                onClick={() => document.getElementById('team')?.scrollIntoView({ behavior: 'smooth' })}
-                className="text-sm hover:bg-accent"
-              >
-                Team
-              </Button>
-              <Button 
-                variant="ghost" 
-                size="sm"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                 className="text-sm hover:bg-accent"
               >

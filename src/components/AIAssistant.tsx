@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Sparkles, Brain, Zap } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const AIAssistant = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -103,22 +104,26 @@ const AIAssistant = () => {
               <div className="absolute inset-0 bg-syncore-gradient opacity-20 blur-3xl rounded-3xl group-hover:opacity-30 transition-opacity duration-500"></div>
               
               {/* Main image */}
-              <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border border-border">
+              <div 
+                className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border border-border cursor-pointer"
+                onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 <img 
                   src="/lovable-uploads/89f07d4a-9096-4a83-89b6-79dde24df50b.png" 
                   alt="AI-Powered Clinical Assistant in Syncore EHR" 
                   className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-              
-              {/* Floating elements */}
-              <div className="absolute -top-8 -right-8 w-16 h-16 bg-syncore-gradient rounded-full flex items-center justify-center animate-pulse">
-                <Brain className="w-8 h-8 text-white" />
-              </div>
-              
-              <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-syncore-blue rounded-full flex items-center justify-center animate-bounce">
-                <Sparkles className="w-6 h-6 text-white" />
-              </div>
+            </div>
+            
+            {/* View All Features Button */}
+            <div className="flex justify-center mt-8">
+              <Button 
+                onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
+                className="bg-syncore-gradient hover:opacity-90 text-white text-lg px-8 py-3"
+              >
+                View All Features →
+              </Button>
             </div>
           </div>
         </div>
