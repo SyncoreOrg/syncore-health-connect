@@ -50,10 +50,6 @@ const Hero = () => {
                 Request Demo
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button variant="outline" size="lg">
-                <Play className="mr-2 h-5 w-5" />
-                Watch Video
-              </Button>
             </div>
             <div className="mt-8 flex flex-wrap gap-6 text-sm text-muted-foreground justify-center lg:justify-start">
               <div className="flex items-center gap-2">

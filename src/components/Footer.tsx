@@ -1,6 +1,8 @@
 import { Separator } from "@/components/ui/separator";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <footer className="bg-foreground text-background py-12">
       <div className="container mx-auto px-4">
@@ -14,7 +16,7 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Product</h4>
             <ul className="space-y-2 text-sm text-background/70">
-              <li><a href="#" className="hover:text-background transition-colors">Features</a></li>
+              <li><button onClick={() => navigate('/features')} className="hover:text-background transition-colors text-left">Features</button></li>
               <li><a href="#" className="hover:text-background transition-colors">Pricing</a></li>
               <li><a href="#" className="hover:text-background transition-colors">Security</a></li>
             </ul>

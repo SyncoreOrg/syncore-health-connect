@@ -1,10 +1,14 @@
 import { useEffect, useRef, useState } from "react";
-import { Sparkles, Brain, Zap } from "lucide-react";
+import { Sparkles, Brain, Zap, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { useNavigate } from "react-router-dom";
 
 const AIAssistant = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -104,22 +108,32 @@ const AIAssistant = () => {
               <div className="absolute inset-0 bg-syncore-gradient opacity-20 blur-3xl rounded-3xl group-hover:opacity-30 transition-opacity duration-500"></div>
               
               {/* Main image */}
-              <div 
-                className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border border-border cursor-pointer"
-                onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                <img 
-                  src="/lovable-uploads/89f07d4a-9096-4a83-89b6-79dde24df50b.png" 
-                  alt="AI-Powered Clinical Assistant in Syncore EHR" 
-                  className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
+              <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+                <DialogTrigger asChild>
+                  <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border border-border cursor-pointer">
+                    <img 
+                      src="/lovable-uploads/89f07d4a-9096-4a83-89b6-79dde24df50b.png" 
+                      alt="AI-Powered Clinical Assistant in Syncore EHR" 
+                      className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                </DialogTrigger>
+                <DialogContent className="max-w-7xl w-[95vw] h-[95vh] p-0">
+                  <div className="relative w-full h-full">
+                    <img 
+                      src="/lovable-uploads/89f07d4a-9096-4a83-89b6-79dde24df50b.png" 
+                      alt="AI-Powered Clinical Assistant in Syncore EHR - Full Size" 
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                </DialogContent>
+              </Dialog>
             </div>
             
             {/* View All Features Button */}
             <div className="flex justify-center mt-8">
               <Button 
-                onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => navigate('/features')}
                 className="bg-syncore-gradient hover:opacity-90 text-white text-lg px-8 py-3"
               >
                 View All Features →
