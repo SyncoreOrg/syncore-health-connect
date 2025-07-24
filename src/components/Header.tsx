@@ -16,24 +16,26 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-8 ">
-              <img 
-                src="/public/favicon.ico" 
-                alt="Syncore Health" 
-                className={`h-8 w-auto transition-all duration-1000 ease-out ${
-                  isLoaded ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'
-                }`}
+            <a href="/">
+              <img
+                src="/favicon.svg"
+                alt="Syncore Health"
+                className={`h-12 w-auto rounded-full transition-all duration-1000 ease-out ${isLoaded ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'
+                  }`}
               />
+            </a>
+
             <nav className="hidden md:flex items-center gap-3">
-              <Button 
-                variant="ghost" 
+              <Button
+                variant="ghost"
                 size="sm"
                 onClick={() => navigate('/features')}
                 className="text-sm hover:bg-accent"
               >
                 Features
               </Button>
-              <Button 
-                variant="ghost" 
+              <Button
+                variant="ghost"
                 size="sm"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                 className="text-sm hover:bg-accent"
@@ -42,7 +44,7 @@ const Header = () => {
               </Button>
             </nav>
           </div>
-          
+
           <div className="flex items-center gap-4">
             <Button variant="ghost" className="hidden sm:inline-flex">
               Login
