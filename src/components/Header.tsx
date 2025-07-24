@@ -17,7 +17,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-8 ">
               <img 
-                src="/lovable-uploads/syncore-health-logo.svg" 
+                src="/public/favicon.ico" 
                 alt="Syncore Health" 
                 className={`h-8 w-auto transition-all duration-1000 ease-out ${
                   isLoaded ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'
