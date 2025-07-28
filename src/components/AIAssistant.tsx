@@ -48,9 +48,9 @@ const AIAssistant = () => {
             </div>
             
             <h2 className="text-4xl lg:text-5xl font-bold text-foreground">
-              Clinical Intelligence,{" "}
+              Meet{" "}
               <span className="bg-syncore-gradient bg-clip-text text-transparent">
-                Redefined
+                MINA
               </span>
             </h2>
             
