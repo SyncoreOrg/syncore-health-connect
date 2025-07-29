@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import { useState, useEffect } from "react";
+import Globe from "@/components/ui/3d-orb";
 
 const Hero = () => {
   const [displayedText, setDisplayedText] = useState("");
@@ -43,7 +44,7 @@ const Hero = () => {
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
               Fast, intuitive, and AI-powered EHR systems that work anywhere. 
-              Designed by healthcare teams for healthcare teams.
+              Designed by healthcare teams for healthcare teams around the globe.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button size="lg" className="bg-syncore-gradient hover:opacity-90 text-white">
@@ -67,11 +68,9 @@ const Hero = () => {
             </div>
           </div>
           <div className="flex-1 max-w-lg">
-            <img 
-              src="/lovable-uploads/syncore-health-logo.svg" 
-              alt="Syncore Health Logo" 
-              className="w-full h-auto"
-            />
+            <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden rounded-lg">
+              <Globe />
+            </div>
           </div>
         </div>
       </div>

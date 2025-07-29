@@ -14,10 +14,10 @@ const Index = () => {
       <Header />
       <main className="pt-16">
         <Hero />
+        <AIAssistant />
         <section id="features">
           <Features />
         </section>
-        <AIAssistant />
         <Mission />
         <section id="team">
           <Team />
