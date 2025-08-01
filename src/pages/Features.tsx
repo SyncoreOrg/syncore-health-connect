@@ -187,7 +187,7 @@ const Features = () => {
               </h2>
               
               <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                MINA is Syncore's proprietary AI assistant — not just a helper, but a thinking partner. 
+                MINA is Syncore's proprietary AI assistant, not just a helper, but a thinking partner. 
                 Unlike traditional tools, MINA understands context and acts as the intelligent brain of the platform.
               </p>
 
@@ -197,21 +197,21 @@ const Features = () => {
                   <div className="space-y-3">
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-syncore-blue rounded-full mt-2"></div>
-                      <p className="text-muted-foreground">Reduces cognitive load — clinicians don't need to remember everything</p>
+                      <p className="text-muted-foreground"><strong>Reduces cognitive load</strong> — clinicians don't need to remember everything</p>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-syncore-purple rounded-full mt-2"></div>
-                      <p className="text-muted-foreground">Frees up time — less clicking, less typing, less back-and-forth</p>
+                      <p className="text-muted-foreground"><strong>Frees up time</strong> — less clicking, less typing, less back-and-forth</p>
                     </div>
                   </div>
                   <div className="space-y-3">
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-syncore-pink rounded-full mt-2"></div>
-                      <p className="text-muted-foreground">Improves safety — catches what humans might miss</p>
+                      <p className="text-muted-foreground"><strong>Improves safety</strong> — catches what humans might miss</p>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-syncore-blue rounded-full mt-2"></div>
-                      <p className="text-muted-foreground">Elevates care — helps clinicians make better decisions</p>
+                      <p className="text-muted-foreground"><strong>Elevates care</strong> — helps clinicians make better decisions</p>
                     </div>
                   </div>
                 </div>
@@ -252,21 +252,6 @@ const Features = () => {
                     </div>
                   );
                 })}
-              </div>
-
-              {/* MINA Vision */}
-              <div className="mt-16 text-center">
-                <Card className="p-8 lg:p-12 bg-gradient-to-br from-syncore-gradient/5 to-syncore-gradient/10 border-syncore-gradient/20">
-                  <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
-                    The Vision: Your Clinical Operating System
-                  </h3>
-                  <p className="text-lg text-muted-foreground leading-relaxed max-w-4xl mx-auto">
-                    MINA represents the future of healthcare technology — not just software that holds data, 
-                    but software that thinks alongside you. As it evolves, MINA will become the operating system 
-                    of the clinic, where every insight, every task, and every decision flows through one unified, 
-                    intelligent interface.
-                  </p>
-                </Card>
               </div>
             </div>
           </div>
