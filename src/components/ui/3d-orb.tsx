@@ -3,7 +3,6 @@ import * as THREE from "three"
 
 export default function Globe() {
   const mountRef = useRef<HTMLDivElement>(null)
-  const [showHint, setShowHint] = useState(true)
 
   useEffect(() => {
     if (!mountRef.current) return
@@ -165,10 +164,6 @@ export default function Globe() {
     }
     window.addEventListener("resize", handleResize)
 
-    const hintTimer = setTimeout(() => {
-      setShowHint(false)
-    }, 3000)
-
     return () => {
       window.removeEventListener("resize", handleResize)
       cancelAnimationFrame(animationId)
@@ -186,17 +181,11 @@ export default function Globe() {
       if (mountRef.current && renderer.domElement.parentNode === mountRef.current) {
         mountRef.current.removeChild(renderer.domElement)
       }
-      clearTimeout(hintTimer)
     }
   }, [])
 
   return (
     <div ref={mountRef} className="w-full h-full relative">
-      {showHint && (
-        <div className="absolute bottom-4 right-4 bg-black/30 text-white text-xs px-3 py-2 rounded-full transition-opacity duration-1000 opacity-80 backdrop-blur-sm">
-          Click and drag to rotate
-        </div>
-      )}
     </div>
   )
 }

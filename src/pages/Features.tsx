@@ -54,31 +54,31 @@ const Features = () => {
     {
       icon: Brain,
       title: "Smarter chart review, powered by AI",
-      description: "All information is easily accessible, no need to scroll through pages. Summaries are auto generated, and you can ask Syncore anything about the patient's history.",
+      description: "All information is easily accessible, no need to scroll through pages. Summaries are auto generated, and you can ask Syncore anything about the patient's history. This intelligent approach eliminates the time-consuming task of manually searching through lengthy medical records.",
       color: "syncore-blue"
     },
     {
       icon: FileText,
       title: "Documentation and Workflow",
-      description: "Built-in AI Scribe & auto-documentation, removing the hassle of filling out paperwork. Talk to the software - use your voice to fill out forms and take notes.",
+      description: "Built-in AI Scribe & auto-documentation, removing the hassle of filling out paperwork. Talk to the software - use your voice to fill out forms and take notes. Save hours every day with intelligent automation that understands clinical context and medical terminology.",
       color: "syncore-purple"
     },
     {
       icon: Users,
       title: "Effortless Admin Management",
-      description: "Add doctors, nurses, and technicians in seconds, no IT help needed. No training required: If you can use your email, you can use Syncore.",
+      description: "Add doctors, nurses, and technicians in seconds, no IT help needed. No training required: If you can use your email, you can use Syncore. Our intuitive interface ensures your entire team can be productive from day one without extensive onboarding.",
       color: "syncore-pink"
     },
     {
       icon: DollarSign,
       title: "Simplified Billing, Full Visibility",
-      description: "Track claims, payments, denials, and revenue in one clean dashboard. Syncore makes it easy to manage the full billing lifecycle without relying on external tools or messy spreadsheets.",
+      description: "Track claims, payments, denials, and revenue in one clean dashboard. Syncore makes it easy to manage the full billing lifecycle without relying on external tools or messy spreadsheets. Real-time analytics help you optimize revenue and identify billing bottlenecks instantly.",
       color: "syncore-blue"
     },
     {
       icon: Shield,
       title: "Smarter Decisions. Safer Prescriptions.",
-      description: "Clinical Assistant: Instant clinical recommendations from symptoms, history, and notes. Gets smarter with every case. Prescription Safety: Flags interactions, duplications, and dosage issues in real time.",
+      description: "Clinical Assistant: Instant clinical recommendations from symptoms, history, and notes. Gets smarter with every case. Prescription Safety: Flags interactions, duplications, and dosage issues in real time. Advanced algorithms continuously monitor patient safety and provide evidence-based guidance.",
       color: "syncore-purple"
     }
   ];
@@ -317,13 +317,6 @@ const Features = () => {
                             {feature.description}
                           </p>
                         </div>
-                        
-                        <Button 
-                          variant="outline" 
-                          className={`group-hover:border-${feature.color} group-hover:text-${feature.color} transition-all duration-300`}
-                        >
-                          Learn More →
-                        </Button>
                       </div>
                       
                       {/* Visual Element */}
@@ -355,12 +348,9 @@ const Features = () => {
                 Join thousands of healthcare professionals who trust Syncore to streamline their operations.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex justify-center">
                 <Button size="lg" className="bg-syncore-gradient hover:opacity-90 text-white">
                   Request Demo
-                </Button>
-                <Button variant="outline" size="lg">
-                  Contact Sales
                 </Button>
               </div>
             </div>
