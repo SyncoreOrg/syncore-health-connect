@@ -7,8 +7,15 @@ import { useNavigate } from "react-router-dom";
 const AIAssistant = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [isWordVisible, setIsWordVisible] = useState(true);
+  const [currentFeatureIndex, setCurrentFeatureIndex] = useState(0);
+  const [isFeatureVisible, setIsFeatureVisible] = useState(true);
   const sectionRef = useRef<HTMLElement>(null);
   const navigate = useNavigate();
+
+  const animatedWords = ["assistant", "partner", "intelligence", "brain", "companion"];
+  const animatedFeatures = ["documentation", "decision support", "medication orders", "referrals", "lab results"];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -28,6 +35,32 @@ const AIAssistant = () => {
     }
 
     return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsWordVisible(false); // Start fade out
+      
+      setTimeout(() => {
+        setCurrentWordIndex((prev) => (prev + 1) % animatedWords.length);
+        setIsWordVisible(true); // Start fade in with new word
+      }, 300); // Wait for fade out to complete
+    }, 2500); // Increased interval to account for fade timing
+
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsFeatureVisible(false); // Start fade out
+      
+      setTimeout(() => {
+        setCurrentFeatureIndex((prev) => (prev + 1) % animatedFeatures.length);
+        setIsFeatureVisible(true); // Start fade in with new feature
+      }, 300); // Wait for fade out to complete
+    }, 3000); // Different timing to avoid synchronization
+
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -55,13 +88,34 @@ const AIAssistant = () => {
             </h2>
             
             <div className="max-w-4xl mx-auto space-y-6">
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                Introducing a groundbreaking innovation in Syncore's EHR system — our AI-Powered Clinical Assistant delivers real-time, patient-specific medical guidance directly within the platform. By analyzing individual medical histories, current medications, and treatment progress, it provides context-aware recommendations to support clinical decisions — such as safe prescribing of medications like clonazepam.
-              </p>
-              
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                This intelligent assistant enhances accuracy, speeds up care delivery, and empowers providers with deeper insights — all without leaving the patient chart. It's not just EHR — it's clinical intelligence, redefined.
-              </p>
+              <div className="text-xl text-muted-foreground leading-relaxed">
+                <p className="mb-4">
+                  MINA is Syncore's AI-powered clinical{" "}
+                  <span 
+                    className={`inline-block bg-syncore-gradient bg-clip-text text-transparent font-semibold transition-all duration-300 ease-in-out transform ${
+                      isWordVisible 
+                        ? 'opacity-100 translate-y-0' 
+                        : 'opacity-0 -translate-y-2'
+                    }`}
+                  >
+                    {animatedWords[currentWordIndex]}
+                  </span>
+                  {" "}that transforms your EHR from a static database into a dynamic thinking partner.
+                </p>
+                <p>
+                  Unlike traditional tools, MINA understands context and interacts fluidly with every part of your system, {" "}
+                  <span 
+                    className={`inline-block bg-syncore-gradient bg-clip-text text-transparent font-semibold transition-all duration-300 ease-in-out transform ${
+                      isFeatureVisible 
+                        ? 'opacity-100 translate-y-0' 
+                        : 'opacity-0 -translate-y-2'
+                    }`}
+                  >
+                    {animatedFeatures[currentFeatureIndex]}
+                  </span>
+                  {" "}— all in real time.
+                </p>
+              </div>
             </div>
             
             <div className="flex justify-center">
