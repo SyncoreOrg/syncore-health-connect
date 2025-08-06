@@ -4,7 +4,7 @@ import { ArrowRight, Mail, Phone } from "lucide-react";
 
 const CTA = () => {
   return (
-    <section className="py-20 bg-syncore-gradient">
+    <section id="contact" className="py-20 bg-syncore-gradient">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center text-white">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">
@@ -35,11 +35,21 @@ const CTA = () => {
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
                   <Mail className="w-5 h-5" />
-                  <span>hello@syncorehealth.com</span>
+                  <a 
+                    href="mailto:syncoremedicaltechnologies@gmail.com"
+                    className="hover:underline transition-all duration-200 cursor-pointer"
+                  >
+                    syncoremedicaltechnologies@gmail.com
+                  </a>
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5" />
-                  <span>+1 (555) 123-4567</span>
+                  <a 
+                    href="tel:+14034618358"
+                    className="hover:underline transition-all duration-200 cursor-pointer"
+                  >
+                    +1 (403) 461-8358
+                  </a>
                 </div>
               </div>
             </div>
