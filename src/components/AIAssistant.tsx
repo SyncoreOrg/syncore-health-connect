@@ -166,7 +166,7 @@ const AIAssistant = () => {
                 <DialogTrigger asChild>
                   <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border border-border cursor-pointer">
                     <img 
-                      src="/lovable-uploads/89f07d4a-9096-4a83-89b6-79dde24df50b.png" 
+                      src="/MINA.png" 
                       alt="AI-Powered Clinical Assistant in Syncore EHR" 
                       className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
                     />
@@ -175,7 +175,7 @@ const AIAssistant = () => {
                 <DialogContent className="max-w-7xl w-[95vw] h-[95vh] p-0">
                   <div className="relative w-full h-full">
                     <img 
-                      src="/lovable-uploads/89f07d4a-9096-4a83-89b6-79dde24df50b.png" 
+                      src="/MINA.png" 
                       alt="AI-Powered Clinical Assistant in Syncore EHR - Full Size" 
                       className="w-full h-full object-contain"
                     />
