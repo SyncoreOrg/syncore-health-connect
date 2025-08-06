@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Brain, FileText, Users, DollarSign, Shield, Sparkles, Mic, MessageSquare, Stethoscope, ClipboardList, AlertTriangle, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -55,31 +56,36 @@ const Features = () => {
       icon: Brain,
       title: "Smarter chart review, powered by AI",
       description: "All information is easily accessible, no need to scroll through pages. Summaries are auto generated, and you can ask Syncore anything about the patient's history. This intelligent approach eliminates the time-consuming task of manually searching through lengthy medical records.",
-      color: "syncore-blue"
+      color: "syncore-blue",
+      image: "/smarterchart.png"
     },
     {
       icon: FileText,
       title: "Documentation and Workflow",
       description: "Built-in AI Scribe & auto-documentation, removing the hassle of filling out paperwork. Talk to the software - use your voice to fill out forms and take notes. Save hours every day with intelligent automation that understands clinical context and medical terminology.",
-      color: "syncore-purple"
+      color: "syncore-purple",
+      image: "/documentation.png"
     },
     {
       icon: Users,
       title: "Effortless Admin Management",
       description: "Add doctors, nurses, and technicians in seconds, no IT help needed. No training required: If you can use your email, you can use Syncore. Our intuitive interface ensures your entire team can be productive from day one without extensive onboarding.",
-      color: "syncore-pink"
+      color: "syncore-pink",
+      image: "/admin.png"
     },
     {
       icon: DollarSign,
       title: "Simplified Billing, Full Visibility",
       description: "Track claims, payments, denials, and revenue in one clean dashboard. Syncore makes it easy to manage the full billing lifecycle without relying on external tools or messy spreadsheets. Real-time analytics help you optimize revenue and identify billing bottlenecks instantly.",
-      color: "syncore-blue"
+      color: "syncore-blue",
+      image: "/billing.png"
     },
     {
       icon: Shield,
       title: "Smarter Decisions. Safer Prescriptions.",
       description: "Clinical Assistant: Instant clinical recommendations from symptoms, history, and notes. Gets smarter with every case. Prescription Safety: Flags interactions, duplications, and dosage issues in real time. Advanced algorithms continuously monitor patient safety and provide evidence-based guidance.",
-      color: "syncore-purple"
+      color: "syncore-purple",
+      image: "/prescribing.png"
     }
   ];
 
@@ -306,9 +312,34 @@ const Features = () => {
                       
                       {/* Visual Element */}
                       <div className="flex-1 flex items-center justify-center">
-                        <div className={`w-64 h-64 rounded-3xl bg-gradient-to-br from-${feature.color}/20 to-${feature.color}/5 flex items-center justify-center group-hover:scale-105 transition-transform duration-500`}>
-                          <Icon className={`w-24 h-24 text-${feature.color}/60`} />
-                        </div>
+                        <Dialog>
+                          <DialogTrigger asChild>
+                            <div className={`${
+                              feature.title.includes('Smarter chart') 
+                                ? 'w-fit h-fit' 
+                                : 'w-full max-w-md h-64 lg:h-80'
+                            } rounded-2xl overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow duration-500 cursor-pointer`}>
+                              <img 
+                                src={feature.image} 
+                                alt={`${feature.title} interface preview`}
+                                className={`${
+                                  feature.title.includes('Smarter chart')
+                                    ? 'w-auto h-auto max-w-full max-h-96 object-contain'
+                                    : 'w-full h-full object-contain bg-gray-50 dark:bg-gray-800'
+                                } group-hover:scale-105 transition-transform duration-500`}
+                              />
+                            </div>
+                          </DialogTrigger>
+                          <DialogContent className="max-w-5xl w-[95vw] h-[95vh] p-2">
+                            <div className="relative w-full h-full flex items-center justify-center">
+                              <img 
+                                src={feature.image} 
+                                alt={`${feature.title} interface preview - Full Size`}
+                                className="max-w-full max-h-full object-contain rounded-lg"
+                              />
+                            </div>
+                          </DialogContent>
+                        </Dialog>
                       </div>
                     </Card>
                   </div>
