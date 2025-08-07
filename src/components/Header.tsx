@@ -46,10 +46,10 @@ const Header = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <Button variant="ghost" className="hidden sm:inline-flex">
-              Login
-            </Button>
-            <Button className="bg-syncore-gradient hover:opacity-90 text-white">
+            <Button 
+              className="bg-syncore-gradient hover:opacity-90 text-white"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Request Demo
             </Button>
             <Button variant="ghost" size="icon" className="md:hidden">

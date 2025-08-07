@@ -47,7 +47,11 @@ const Hero = () => {
               Designed by healthcare teams for healthcare teams around the globe.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button size="lg" className="bg-syncore-gradient hover:opacity-90 text-white">
+              <Button 
+                size="lg" 
+                className="bg-syncore-gradient hover:opacity-90 text-white"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 Request Demo
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
